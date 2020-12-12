@@ -3,14 +3,16 @@ using namespace std;
 
 class SavingsAccount{
     private:
+	int dollars;
+	int cents;
+	// Private function that normalizes the amount of dollars and cents, so that all multiples of 100s in cents are stored in dollars, and cents is never > 100;
+	// Austin Folster
     void normalize() {
-    dollars = cents / 100;
-    cents = cents % 100;
-  }
+		dollars = cents / 100;
+		cents = cents % 100;
+	  }
     public:
     void display();
-    int dollars;
-    int cents;
     SavingsAccount();
     void deposit();
     void display();
@@ -38,6 +40,8 @@ void SavingsAccount::deposit() {
     dollars += interim_dollars;
     cents += interim_cents;
 }
+//takes no parameters and returns nothing, simply prints out the current amount of dollars and cents after calling normalize()
+//Austin Folster
 void SavingsAccount::display() {
   normalize();
   cout << "Dollars = " << dollars << "           Cents = " << cents;
