@@ -15,6 +15,7 @@ class SavingsAccount{
     SavingsAccount();
     void deposit();
     void display();
+    void withdraw();
 };
 //Constructor for the SavingsAccount class, takes user input for initial dollar and cents values.
 //William Box
@@ -40,6 +41,24 @@ void SavingsAccount::deposit() {
     }
     dollars += interim_dollars;
     cents += interim_cents;
+}
+// Withdraw function, Asks if user wants to withdraw money. If they do, the function updates the "dollars" and "cents" values accordingly.
+// Written by William Box using the deposit function from Auityan as reference.
+void SavingsAccount::withdraw() {
+  int interim_dollars=0;
+    int interim_cents=0;
+    char withdraw;
+    cout << "Would you like to make a withdraw? Y or y for yes. Enter any other value for skipping this step" << endl;
+    cin >> withdraw;
+    if (withdraw == 'y' || withdraw == 'Y')
+    {
+        cout << "Please input dollars to be withdrawn" << endl;
+        cin >> interim_dollars;
+        cout << "Please input cents to be withdrawn" << endl;
+        cin >> interim_cents;
+    }
+    dollars -= interim_dollars;
+    cents -= interim_cents;
 }
 //takes no parameters and returns nothing, simply prints out the current amount of dollars and cents after calling normalize()
 //Austin Folster
