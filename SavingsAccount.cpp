@@ -8,8 +8,9 @@ class SavingsAccount{
 	// Private function that normalizes the amount of dollars and cents, so that all multiples of 100s in cents are stored in dollars, and cents is never > 100;
 	// Austin Folster
     void normalize() {
-		dollars = cents / 100;
-		cents = cents % 100;
+            cents = (dollars * 100) + cents;
+            dollars = cents / 100;
+            cents = cents % 100;
 	  }
     public:
     SavingsAccount();
