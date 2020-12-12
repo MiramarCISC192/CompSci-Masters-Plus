@@ -15,7 +15,6 @@ class SavingsAccount{
     void display();
     SavingsAccount();
     void deposit();
-    void display();
 };
 //constructor for the SavingsAccount class, takes user input for initial dollar and cents values.
 SavingsAccount::SavingsAccount(){
