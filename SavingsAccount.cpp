@@ -12,11 +12,12 @@ class SavingsAccount{
 		cents = cents % 100;
 	  }
     public:
-    void display();
     SavingsAccount();
     void deposit();
+    void display();
 };
-//constructor for the SavingsAccount class, takes user input for initial dollar and cents values.
+//Constructor for the SavingsAccount class, takes user input for initial dollar and cents values.
+//William Box
 SavingsAccount::SavingsAccount(){
     cout << "Please input the initial dollars" << endl;
     cin >> dollars;
