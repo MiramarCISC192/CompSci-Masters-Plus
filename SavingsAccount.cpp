@@ -44,7 +44,6 @@ void SavingsAccount::deposit() {
 void SavingsAccount::withdraw() {
     int interim_dollars=0;
     int interim_cents=0;
-    char withdraw;
 
     cout << "Please input dollars to be withdrawn" << endl;
     cin >> interim_dollars;
