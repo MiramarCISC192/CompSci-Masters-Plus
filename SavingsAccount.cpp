@@ -22,6 +22,7 @@ SavingsAccount::SavingsAccount(){
     cin >> cents;
 }
 void SavingsAccount::deposit() {
+    // Deposit function. Asks if user wants to deposit. If user inputs right character, changes the "dolalrs" and "cents" variables accordingly.
     int interim_dollars=0;
     int interim_cents=0;
     char deposit;
