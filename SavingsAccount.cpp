@@ -39,19 +39,19 @@ void SavingsAccount::deposit() {
     dollars += interim_dollars;
     cents += interim_cents;
 }
-// Withdraw function, Asks if user wants to withdraw money. If they do, the function updates the "dollars" and "cents" values accordingly.
-// Written by William Box using the deposit function from Auityan as reference.
-void SavingsAccount::withdraw() {
-    int interim_dollars=0;
-    int interim_cents=0;
+//The purpose of this function is to subtract money from this object, and it does this by asking how much you wish to withdraw from the account, and updating the variables accordingly.
+//Erik Brooks
+void SavingsAccount::withdraw(){
+    int amount = 0;
 
-    cout << "Please input dollars to be withdrawn" << endl;
-    cin >> interim_dollars;
-    cout << "Please input cents to be withdrawn" << endl;
-    cin >> interim_cents;
-
-    dollars -= interim_dollars;
-    cents -= interim_cents;
+    cout << "How many dollars do you want to withdraw?" << endl;
+    cin >> amount;
+    dollars -= amount;
+    
+    cout << "How many cents do you want to withdraw"<<endl;
+    cin >> amount;
+    cents -= amount;
+}
 }
 //takes no parameters and returns nothing, simply prints out the current amount of dollars and cents after calling normalize()
 //Austin Folster
